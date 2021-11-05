@@ -16,21 +16,25 @@ var cont=0;
 var descs=0;
 var answered=0;
 const nextword = () => {
-    if (cont==25){
-        cont=0;
-        descs=0;
-        document.getElementById("word").innerHTML=letters[cont];
-        document.getElementById("question").innerHTML=desc[cont];
+    if (document.getElementById(String(descs)).classList.contains('item--success') || document.getElementById(String(descs)).classList.contains('item--failure')){
+            cont++;
+            nextword();
     }else{
-        if (document.getElementById(String(descs)).classList.contains('item--success')){}
+        if (cont==24){
+            document.getElementById("word").innerHTML=letters[cont];
+            document.getElementById("question").innerHTML=desc[cont];
+            cont=0;
+        }else {
         document.getElementById("word").innerHTML=letters[cont];
         document.getElementById("question").innerHTML=desc[cont];
         cont++; 
+        }
     }
     if (answered==25){
         document.getElementById("word").innerHTML="el juego a acabado";
         document.getElementById("question").innerHTML="a conseguido "
     }
+    console.log(cont);
 }
 const comparator = () => {
 
@@ -38,12 +42,17 @@ const comparator = () => {
     document.getElementById('resp').value="";
     console.log(resp);
     const word=words[descs];
+
     if (resp==word){
         document.getElementById(String(descs)).classList.add('item--success');
+        document.getElementById(String(descs)).classList.remove('item--skiped');
 
     }else{
         document.getElementById(String(descs)).classList.add('item--failure');
-        
+        document.getElementById(String(descs)).classList.remove('item--skiped');
+    }
+    if (descs==24){
+        descs=0;
     }
     descs++;
     answered++;
@@ -51,8 +60,12 @@ const comparator = () => {
 }
 
 const skip = () => {
+    if (document.getElementById(String(descs)).classList.contains('item--success' || 'item--failure')){
+
+    nextword();
+}else{
     document.getElementById(String(descs)).classList.add('item--skiped');
     descs++;
-    nextword();
+    nextword();}
 }
 nextword();
