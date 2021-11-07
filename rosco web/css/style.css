@@ -196,6 +196,15 @@
     border-radius: 30px;
     
 }
+
+.response-input-icon{
+  color: #93ff19;
+  padding: 0px;
+  margin: 0px;
+  border-radius: 50%;
+  background-color: white;
+
+}
 .next{
     background: rgb(248, 146, 37);
     border-radius: 30px;
