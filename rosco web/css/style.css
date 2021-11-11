@@ -196,15 +196,6 @@
     border-radius: 30px;
     
 }
-
-.response-input-icon{
-  color: #93ff19;
-  padding: 0px;
-  margin: 0px;
-  border-radius: 50%;
-  background-color: white;
-
-}
 .next{
     background: rgb(248, 146, 37);
     border-radius: 30px;
@@ -242,4 +233,21 @@
   left:0%;
   padding-left: 1rem;
   text-align: center;
+}
+.disabled 
+    {
+        cursor: not-allowed;
+        background-color: rgb(229, 229, 229) !important;
+    }
+.login{
+  background:rgb(255, 150, 80);
+  border:1rem inset rgb(221, 128, 6);
+  border-radius: 1rem;
+  position: fixed;
+  top: 5rem;
+  left: 40rem;
+  width: 35rem;
+  height: 20rem;
+  text-align: center;
+  padding: 1rem;
 }
