@@ -23,6 +23,18 @@ desc[3]="Empieza Por D <br> eso que facebook recopila a montones sobre ti.";
 var cont=0;
 var descs=0;
 var answered=0;
+
+var timer = 3;
+var l = document.getElementById("timer");
+ var id=window.setInterval(function(){
+  l.innerHTML = timer;
+  timer--;
+  
+  if(n ==-1){
+    console.log("aca");
+    clearInterval(id);
+  }
+},1000);
 const nextword = () => {
     if (descs > 24){
         descs = 0
