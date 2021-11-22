@@ -7,9 +7,8 @@ words[3]="datos";
 const letters= [ "A","B","c","d"];
 
 var user = new Object();
-user.nickname = 'pepe';
-user.name= 'pepito';
-user.mail = 'pepe@gmail.com';
+user.nickname = 'pepito';
+user.name= 'pepe';
 user.pin = 1969;
 
 
