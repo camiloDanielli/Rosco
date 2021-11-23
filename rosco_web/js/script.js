@@ -23,9 +23,8 @@ const Words = async() => {
     `));
     allWords.push(words).join(',');
     for (let i = 0; i < 25; i++) {
-        words25.splice(i, 0, allWords.find(x => x.letra == i));
+        words25.splice(i, 0, allWords.find(x => x.letra == letters[i]));
     }
-    console.log = words25;
 }
 const Users = async() => {
     const user = await getUser();
