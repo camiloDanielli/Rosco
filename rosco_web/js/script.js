@@ -49,7 +49,6 @@ var id = window.setInterval(function() {
     timer--;
 
     if (n == -1) {
-        console.log("aca");
         clearInterval(id);
     }
 }, 1000);
